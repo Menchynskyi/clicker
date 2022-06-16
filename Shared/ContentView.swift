@@ -1,7 +1,4 @@
 //
-//  ContentView.swift
-//  Shared
-//
 //  Created by Oleksandr Menchynskyi on 15.06.2022.
 //
 
@@ -48,20 +45,24 @@ struct ContentView: View {
     }
     
     private func createButton(_ btnVariant: ButtonVariants) -> some View {
-        return Button(action: {
+        return Button {
             switch btnVariant {
-            case .inc:
-                if (count < maxCount) {
-                    count += 1
-                    emoji = getRandomEmoji()
-                }
             case .res:
                 isShowingConfirmReset = true
+            case .inc:
+                if count < maxCount {
+                    count += 1
+                }
+                emoji = getRandomEmoji()
             }
-        }) {
-            Text(btnVariant == ButtonVariants.inc ? "Add" : "Reset")
-                .foregroundColor(.white)
-                .bold()
+        } label: {
+            let isMaxCount = count == maxCount
+            let incBtnLabel = isMaxCount ? "Emoji" : "Add"
+            let incBtnImage = isMaxCount ? "heart" : "plus"
+            
+            Label(btnVariant == .inc ? incBtnLabel : "Reset", systemImage: btnVariant == .inc ? incBtnImage : "arrow.2.squarepath")
+                .font(Font.system(size: 24))
+                .frame(width: 140, height: 40)
         }
         .confirmationDialog("Are you sure?", isPresented: $isShowingConfirmReset, titleVisibility: .visible) {
             Button("Reset", role: .destructive) {
@@ -69,11 +70,9 @@ struct ContentView: View {
                 emoji = getRandomEmoji()
             }
         }
+        .buttonStyle(.bordered)
+        .tint(btnVariant == .inc ? .cyan : .pink)
         .disabled(btnVariant == .res && count == 0)
-        .frame(width: 170, height: 50, alignment: .center)
-        .overlay(RoundedRectangle(cornerRadius: 8).stroke())
-        .background(btnVariant == ButtonVariants.inc ? Color.cyan : Color.pink)
-        .cornerRadius(8)
     }
 }
 
