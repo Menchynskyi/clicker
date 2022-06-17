@@ -1,3 +1,3 @@
 # Clicker
 
-Multiplatform macOS/iOS clicker 👹
+iOS clicker app with widget 👹
