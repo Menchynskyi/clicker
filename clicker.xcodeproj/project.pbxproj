@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710AA059285D0D9E00320F52 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 710AA058285D0D9E00320F52 /* WidgetKit.framework */; };
+		710AA05B285D0D9E00320F52 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 710AA05A285D0D9E00320F52 /* SwiftUI.framework */; };
+		710AA05E285D0D9E00320F52 /* ClickerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710AA05D285D0D9E00320F52 /* ClickerWidget.swift */; };
+		710AA061285D0D9E00320F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 710AA060285D0D9E00320F52 /* Assets.xcassets */; };
+		710AA063285D0D9E00320F52 /* ClickerWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 710AA05F285D0D9E00320F52 /* ClickerWidget.intentdefinition */; };
+		710AA064285D0D9E00320F52 /* ClickerWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 710AA05F285D0D9E00320F52 /* ClickerWidget.intentdefinition */; };
+		710AA067285D0D9E00320F52 /* ClickerWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 710AA056285D0D9E00320F52 /* ClickerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		718C8E87285A52AE00875DEF /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C8E86285A52AE00875DEF /* Tests_iOS.swift */; };
 		718C8E89285A52AE00875DEF /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C8E88285A52AE00875DEF /* Tests_iOSLaunchTests.swift */; };
 		718C8E93285A52AE00875DEF /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C8E92285A52AE00875DEF /* Tests_macOS.swift */; };
@@ -20,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		710AA065285D0D9E00320F52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 718C8E69285A52AB00875DEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 710AA055285D0D9E00320F52;
+			remoteInfo = ClickerWidgetExtension;
+		};
 		718C8E83285A52AE00875DEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 718C8E69285A52AB00875DEF /* Project object */;
@@ -36,7 +50,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		710AA068285D0D9E00320F52 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				710AA067285D0D9E00320F52 /* ClickerWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		710AA056285D0D9E00320F52 /* ClickerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClickerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		710AA058285D0D9E00320F52 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		710AA05A285D0D9E00320F52 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		710AA05D285D0D9E00320F52 /* ClickerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickerWidget.swift; sourceTree = "<group>"; };
+		710AA05F285D0D9E00320F52 /* ClickerWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ClickerWidget.intentdefinition; sourceTree = "<group>"; };
+		710AA060285D0D9E00320F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		710AA062285D0D9E00320F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		710AA06C285D134700320F52 /* ClickerWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClickerWidgetExtension.entitlements; sourceTree = "<group>"; };
+		710AA06D285D13E800320F52 /* clicker (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "clicker (iOS).entitlements"; sourceTree = "<group>"; };
 		718C8E6E285A52AB00875DEF /* clickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clickerApp.swift; sourceTree = "<group>"; };
 		718C8E6F285A52AB00875DEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		718C8E70285A52AD00875DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +89,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		710AA053285D0D9E00320F52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				710AA05B285D0D9E00320F52 /* SwiftUI.framework in Frameworks */,
+				710AA059285D0D9E00320F52 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		718C8E72285A52AD00875DEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,13 +129,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		710AA057285D0D9E00320F52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				710AA058285D0D9E00320F52 /* WidgetKit.framework */,
+				710AA05A285D0D9E00320F52 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		710AA05C285D0D9E00320F52 /* ClickerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				710AA05D285D0D9E00320F52 /* ClickerWidget.swift */,
+				710AA05F285D0D9E00320F52 /* ClickerWidget.intentdefinition */,
+				710AA060285D0D9E00320F52 /* Assets.xcassets */,
+				710AA062285D0D9E00320F52 /* Info.plist */,
+			);
+			path = ClickerWidget;
+			sourceTree = "<group>";
+		};
 		718C8E68285A52AB00875DEF = {
 			isa = PBXGroup;
 			children = (
+				710AA06D285D13E800320F52 /* clicker (iOS).entitlements */,
+				710AA06C285D134700320F52 /* ClickerWidgetExtension.entitlements */,
 				718C8E6D285A52AB00875DEF /* Shared */,
 				718C8E7C285A52AE00875DEF /* macOS */,
 				718C8E85285A52AE00875DEF /* Tests iOS */,
 				718C8E91285A52AE00875DEF /* Tests macOS */,
+				710AA05C285D0D9E00320F52 /* ClickerWidget */,
+				710AA057285D0D9E00320F52 /* Frameworks */,
 				718C8E76285A52AD00875DEF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,6 +181,7 @@
 				718C8E7B285A52AE00875DEF /* clicker.app */,
 				718C8E82285A52AE00875DEF /* Tests iOS.xctest */,
 				718C8E8E285A52AE00875DEF /* Tests macOS.xctest */,
+				710AA056285D0D9E00320F52 /* ClickerWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +215,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		710AA055285D0D9E00320F52 /* ClickerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 710AA06B285D0D9E00320F52 /* Build configuration list for PBXNativeTarget "ClickerWidgetExtension" */;
+			buildPhases = (
+				710AA052285D0D9E00320F52 /* Sources */,
+				710AA053285D0D9E00320F52 /* Frameworks */,
+				710AA054285D0D9E00320F52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClickerWidgetExtension;
+			productName = ClickerWidgetExtension;
+			productReference = 710AA056285D0D9E00320F52 /* ClickerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		718C8E74285A52AD00875DEF /* clicker (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 718C8E9E285A52AE00875DEF /* Build configuration list for PBXNativeTarget "clicker (iOS)" */;
@@ -151,10 +239,12 @@
 				718C8E71285A52AD00875DEF /* Sources */,
 				718C8E72285A52AD00875DEF /* Frameworks */,
 				718C8E73285A52AD00875DEF /* Resources */,
+				710AA068285D0D9E00320F52 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				710AA066285D0D9E00320F52 /* PBXTargetDependency */,
 			);
 			name = "clicker (iOS)";
 			productName = "clicker (iOS)";
@@ -224,6 +314,9 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					710AA055285D0D9E00320F52 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 					718C8E74285A52AD00875DEF = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -257,11 +350,20 @@
 				718C8E7A285A52AE00875DEF /* clicker (macOS) */,
 				718C8E81285A52AE00875DEF /* Tests iOS */,
 				718C8E8D285A52AE00875DEF /* Tests macOS */,
+				710AA055285D0D9E00320F52 /* ClickerWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		710AA054285D0D9E00320F52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				710AA061285D0D9E00320F52 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		718C8E73285A52AD00875DEF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,12 +397,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		710AA052285D0D9E00320F52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				710AA063285D0D9E00320F52 /* ClickerWidget.intentdefinition in Sources */,
+				710AA05E285D0D9E00320F52 /* ClickerWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		718C8E71285A52AD00875DEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				718C8E98285A52AE00875DEF /* ContentView.swift in Sources */,
 				718C8E96285A52AE00875DEF /* clickerApp.swift in Sources */,
+				710AA064285D0D9E00320F52 /* ClickerWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +446,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		710AA066285D0D9E00320F52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 710AA055285D0D9E00320F52 /* ClickerWidgetExtension */;
+			targetProxy = 710AA065285D0D9E00320F52 /* PBXContainerItemProxy */;
+		};
 		718C8E84285A52AE00875DEF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 718C8E74285A52AD00875DEF /* clicker (iOS) */;
@@ -347,6 +464,67 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		710AA069285D0D9E00320F52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ClickerWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K6P7SB38UN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClickerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ClickerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = menchynskyi.clicker.ClickerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		710AA06A285D0D9E00320F52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ClickerWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K6P7SB38UN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClickerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ClickerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = menchynskyi.clicker.ClickerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		718C8E9C285A52AE00875DEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -459,8 +637,10 @@
 		718C8E9F285A52AE00875DEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "clicker (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K6P7SB38UN;
@@ -489,8 +669,10 @@
 		718C8EA0285A52AE00875DEF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "clicker (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K6P7SB38UN;
@@ -647,6 +829,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		710AA06B285D0D9E00320F52 /* Build configuration list for PBXNativeTarget "ClickerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				710AA069285D0D9E00320F52 /* Debug */,
+				710AA06A285D0D9E00320F52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		718C8E6C285A52AB00875DEF /* Build configuration list for PBXProject "clicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

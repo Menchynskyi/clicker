@@ -1,8 +1,7 @@
-//
-//  Created by Oleksandr Menchynskyi on 15.06.2022.
-//
-
+import WidgetKit
 import SwiftUI
+
+let appGroupName = "group.com.clicker.state"
 
 func getRandomEmoji() -> String {
     return String(UnicodeScalar(Array(0x1F300...0x1F3F0).randomElement()!)!)
@@ -11,8 +10,8 @@ func getRandomEmoji() -> String {
 struct ContentView: View {
     private let maxCount = 999
 
-    @AppStorage("count") private var count: Int = 0
-    @AppStorage("emoji") private var emoji: String = getRandomEmoji()
+    @AppStorage("count", store: UserDefaults(suiteName: appGroupName)) private var count: Int = 0
+    @AppStorage("emoji", store: UserDefaults(suiteName: appGroupName)) private var emoji: String = getRandomEmoji()
     @State private var isShowingConfirmReset: Bool = false
 
     var body: some View {
@@ -33,6 +32,10 @@ struct ContentView: View {
         }
     }
 
+    private func updateWidget() {
+        WidgetCenter.shared.reloadTimelines(ofKind: "ClickerWidget")
+    }
+
     private func createCounterText() -> Text {
         return Text("\(emoji) \(count) \(emoji)")
             .foregroundColor(.white)
@@ -45,6 +48,7 @@ struct ContentView: View {
                 count += 1
             }
             emoji = getRandomEmoji()
+            updateWidget()
         } label: {
             let isMaxCount = count == maxCount
             let incBtnLabel = isMaxCount ? "Emoji" : "Add"
@@ -70,6 +74,7 @@ struct ContentView: View {
             Button("Reset", role: .destructive) {
                 count = 0
                 emoji = getRandomEmoji()
+                updateWidget()
             }
         }
         .disabled(count == 0)
